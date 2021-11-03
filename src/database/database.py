@@ -1,6 +1,6 @@
 from sqlalchemy import create_engine
 from sqlalchemy.engine.base import Engine
-from src.abstract.singleton import Singleton
+from src.abstracts.singleton import Singleton
 from sqlalchemy.orm import sessionmaker
 from env import DATABASE_HOST, DATABASE_PASSWORD, DATABASE_USER_NAME, DATABASE_NAME, RDBMS
 

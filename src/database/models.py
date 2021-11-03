@@ -15,6 +15,7 @@ class SampleModel(Base):  # type: ignore
 if __name__ == '__main__':
     option = input('column[c/r/d] : ')
     db = Database()
+
     if option == 'c':
         Base.metadata.create_all(db.engin)
     elif option == 'r':
