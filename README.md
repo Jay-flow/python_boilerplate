@@ -1,7 +1,7 @@
 # Python boilerplate
 
-<img src="https://cdn3.iconfinder.com/data/icons/logos-and-brands-adobe/512/267_Python-512.png" data-canonical-src="https://gyazo.com/eb5c5741b6a9a16c692170a41a49c858.png" width="100" />
-<img src="https://e7.pngegg.com/pngimages/354/728/png-clipart-plus-and-minus-signs-computer-icons-emoji-logo-plus-thumbnail.png" data-canonical-src="https://gyazo.com/eb5c5741b6a9a16c692170a41a49c858.png" width="100" />
+Python + VSCode + 𝖳𝗒𝗉𝖾 hint(mypy, pylint)
+
 This repositry is a repositry that created a booilerplate for Linting in a Visual Studio Code environment.
 
 ---
