@@ -1,9 +1,6 @@
-from src.scraping.sample_scraping import SampleScraping
-
-
 class Main:
     def run(self) -> None:
-        SampleScraping().run()
+        print("Run!")
 
 
 if __name__ == '__main__':
