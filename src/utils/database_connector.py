@@ -1,7 +1,7 @@
 from sqlalchemy import create_engine
 from sqlalchemy.orm import Session
 
-from src.models.singleton import Singleton
+from src.abstracts.singleton import Singleton
 from src.utils.env import get
 
 
