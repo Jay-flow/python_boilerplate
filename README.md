@@ -6,30 +6,36 @@ This repositry is a repositry that created a booilerplate for Linting in a Visua
 
 ---
 
-## Getting started with Visual Studio Code.
+## Getting started with Visual Studio Code
 
 1. Install [Python Extension](https://marketplace.visualstudio.com/items?itemName=ms-python.python) from Visual Studio Code.
 
-2. Create a Python virtual environment in Root through the command below.
+2. Please make a.env file by copying the .env_example file.
+
+```bash
+cp .env_example .env
+```
+
+3. Create a Python virtual environment in Root through the command below.
 
 ```bash
 python -m venv venv
 ```
 
-3. To enter the virtual environment, if the terminal is already open, close and reopen or enter the command below in the terminal.
+4. To enter the virtual environment, if the terminal is already open, close and reopen or enter the command below in the terminal.
 
 ```bash
 source venv/bin/activate
 ```
 
-4. Please install the package by entering the command below.
+5. Please install the package by entering the command below.
    The list of packages to be installed can be found through [this link](https://github.com/Jay-flow/python_boilerplate/blob/main/requirements.txt).
 
 ```bash
 pip install -r requirements.txt
 ```
 
-5. To set up [PYTHONPATH](https://docs.python.org/3/using/cmdline.html#envvar-PYTHONPATH), modify the PYTHONPATH in the `.vscode/.env` file to suit the project root path.
+6. To set up [PYTHONPATH](https://docs.python.org/3/using/cmdline.html#envvar-PYTHONPATH), modify the PYTHONPATH in the `.vscode/.env` file to suit the project root path.
    For example.
 
 ```
