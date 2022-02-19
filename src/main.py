@@ -1,6 +1,9 @@
+from sites.google import Google
+
+
 class Main:
     def run(self) -> None:
-        print("Run!")
+        Google().run()
 
 
 if __name__ == '__main__':
