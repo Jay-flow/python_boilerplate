@@ -9,7 +9,10 @@ class DatabaseConnector(metaclass=Singleton):
     def __init__(self):
         self.engin = create_engine(
             get('DATABASE_URL'),
+            pool_pre_ping=True,
             echo=True
         )
 
-        self.session = Session(self.engin)
+    @property
+    def session(self):
+        return Session(self.engin)
