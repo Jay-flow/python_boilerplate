@@ -1,8 +1,8 @@
 from datetime import date
-from pathlib import Path
 
 from src.abstracts.singleton import Singleton
 from src.utils.env import get
+from src.utils.funtions import create_the_directory
 from src.utils.logger_colored_formatter import (LoggerColoredFormatter,
                                                 formatter_message, logging)
 from src.utils.path import os_path_split
@@ -20,7 +20,7 @@ class Logger(metaclass=Singleton):
         self.error = self.logger.error
 
         self.log_dir_path = get('SAVE_LOG_PATH')
-        Path(self.log_dir_path).mkdir(parents=True, exist_ok=True)
+        create_the_directory(self.log_dir_path)
 
     def set_up_log_handler(self, file_name: str) -> None:
         self.set_file_handler(file_name)
@@ -30,6 +30,7 @@ class Logger(metaclass=Singleton):
         file_handler = self.__set_log_file_name(file_name)
         formatter = logging.Formatter(
             '%(asctime)s[%(levelname)s] %(message)s (%(filename)s: %(lineno)s)')
+
         file_handler.setFormatter(formatter)
         self.logger.addHandler(file_handler)
 
@@ -53,6 +54,7 @@ class Logger(metaclass=Singleton):
     def decorate_log(self, log_message: str) -> None:
         result_message = ""
         log_messages = log_message.split("\n")
+        
         for index, message in enumerate(log_messages):
             if index == len(log_messages) - 1:
                 result_message += f"# {message}"
@@ -71,10 +73,7 @@ class Logger(metaclass=Singleton):
 
     def write_error_log_file(self, label: str, message: str):
         Logger().error(
-            error=ValueError(
-                f"Record it in the {label} log file and move on."
-            ),
-            label=label
+            f"Record it in the {label} log file and move on."
         )
         Logger().write_file(label, message)
 
