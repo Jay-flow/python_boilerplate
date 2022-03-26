@@ -6,6 +6,8 @@ name = "pypi"
 [packages]
 sqlalchemy = "*"
 python-dotenv = "*"
+selenium = "*"
+webdriver-manager = "*"
 
 [dev-packages]
 pytest = "*"
