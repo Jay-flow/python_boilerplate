@@ -19,5 +19,7 @@
   },
   "terminal.integrated.env.linux": {
     "PYTHONPATH": "${workspaceFolder}/"
-  }
+  },
+  // This option is for path compatibility with Pycharm.
+  "python.analysis.autoSearchPaths": false,
 }
