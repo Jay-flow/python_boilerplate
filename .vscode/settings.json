@@ -1,0 +1,14 @@
+{
+    "python.envFile": "${workspaceFolder}/.env",
+    "python.analysis.extraPaths": ["${workspaceFolder}"],
+    "terminal.integrated.env.linux": {
+        "PYTHONPATH": "${workspaceFolder}",
+    },
+    "terminal.integrated.env.osx": {
+        "PYTHONPATH": "${workspaceFolder}",
+        "CW_NEW_SESSION": "1"
+    },
+    "python.autoComplete.extraPaths": [
+        "${workspaceFolder}"
+    ],
+}
